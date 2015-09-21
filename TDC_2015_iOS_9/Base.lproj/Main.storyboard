@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Kg-oP-aqo">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="ZEa-n8-RxO">
+            <objects>
+                <viewController id="2MG-HG-MnK" customClass="HomeViewController" customModule="TDC_2015_iOS_9" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gp9-yn-8NR"/>
+                        <viewControllerLayoutGuide type="bottom" id="DHj-cr-cxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n60-LL-hMY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_tdc" translatesAutoresizingMaskIntoConstraints="NO" id="8tp-Wo-7Nu">
+                                <rect key="frame" x="64" y="121" width="472" height="254"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVX-Vt-Edd">
+                                <rect key="frame" x="196" y="411" width="209" height="78"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.94117647059999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="209" id="FaL-el-Kdq"/>
+                                    <constraint firstAttribute="height" constant="78" id="hWM-qd-rIv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="23"/>
+                                <state key="normal" title="Novidades iOS 9">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Nb-lL-XXi" kind="show" identifier="gotoDetail" id="Mf0-WC-QwQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rVX-Vt-Edd" firstAttribute="centerY" secondItem="n60-LL-hMY" secondAttribute="centerY" multiplier="1.5/1" id="5fJ-vb-d03"/>
+                            <constraint firstItem="rVX-Vt-Edd" firstAttribute="centerY" secondItem="n60-LL-hMY" secondAttribute="centerY" multiplier="1.5/1" id="8v0-Si-Cej"/>
+                            <constraint firstItem="rVX-Vt-Edd" firstAttribute="centerX" secondItem="n60-LL-hMY" secondAttribute="centerX" id="8wd-RH-hXw"/>
+                            <constraint firstAttribute="trailing" secondItem="8tp-Wo-7Nu" secondAttribute="trailing" constant="64" id="GRS-26-Fmz"/>
+                            <constraint firstItem="rVX-Vt-Edd" firstAttribute="centerX" secondItem="n60-LL-hMY" secondAttribute="centerX" id="GTt-RF-9Nd"/>
+                            <constraint firstItem="8tp-Wo-7Nu" firstAttribute="leading" secondItem="n60-LL-hMY" secondAttribute="leading" constant="64" id="THd-km-Tw5"/>
+                            <constraint firstItem="8tp-Wo-7Nu" firstAttribute="top" secondItem="gp9-yn-8NR" secondAttribute="bottom" constant="57" id="wT2-d9-tZn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5fJ-vb-d03"/>
+                                <exclude reference="GTt-RF-9Nd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="pT3-IS-R79"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r7c-V8-Z0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="50" y="24"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lrn-jD-15C">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Kg-oP-aqo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1u6-Ub-82v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2MG-HG-MnK" kind="relationship" relationship="rootViewController" id="z7z-tv-Z4u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TF9-wN-lwg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-762" y="24"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="87q-h8-dB7">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeVC" storyboardName="Palestrantes" referencedIdentifier="HomeVC" id="2Nb-lL-XXi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEQ-nE-qjH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="708" y="24"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_tdc" width="743" height="254"/>
+    </resources>
+</document>
